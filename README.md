@@ -13,19 +13,59 @@ We were be permitted to implement solutions based on Naive Bayes methods, both o
 We were also be permitted to implement a solution based on Logistic Regression approach, again with a feature extraction based on pre-processing with a Naive classifier, or extracted directly from Wikipedia based on the annotated keywords. Also in this case, texts could be pre-processed or not.
 
 
+##  Operational Structure:
 
-## Method used
+* Data Import:
+    * Textual data is imported from the '20 newsgroups' dataset with categories such as 'rec.sport.baseball', 'soc.religion.christian', 'sci.med'etc.
+    * These categories are used as labels to train and test the model.
 
-The implementation was performed by using **NLTK (Python library)** and is based on the **Naive Bayes method**.
+* Data Cleaning:
+    * A data cleaning process is performed, including the removal of stopwords, lemmatization of words, and elimination of punctuation.
 
-Main steps in the code:
-- import all the necessary library (sklearn, nltk...)
-- import data from internet (thanks to fetch_20newsgroups from sklearn datasets )
-- clean data (by removing stopwords, lemmatizing and deleting punctuation)
-- convert text documents to a matrix of token counts (using CountVectorizer() from sklearn)
-- inverse document frequency (downscales words that appear a lot across documents by giving a weight to a word indicating its importance for classification)
-- do the Naive Bayes classifier (train the Multinomial Naive Bayes classifier using the TF-IDF transformed training data and the corresponding category then make predictions on the test data)
+* Text Vectorization (CountVectorizer):
+    * Text documents are converted into a matrix of word frequency using CountVectorizer, representing the frequency of each word in the documents.
 
+* TF-IDF Transformation:
+    * A TF-IDF transformation is applied to the word frequency matrix to give more weight to words specific to each document and reduce the importance of common words.
+
+* Model Training (Naive Bayes):
+    * A multinomial Naive Bayes classification model is trained on the TF-IDF-transformed training data.
+
+* Model Evaluation:
+    * The model is evaluated on test data, and metrics such as accuracy, classification report, and confusion matrix are calculated to assess the model's performance.
+
+* Application on New Documents:
+    * The model is used to predict the categories of new documents, demonstrating its ability to generalize to unseen data.
+
+
+## Pipeline:
+
+* Data Import:
+    * Using the fetch_20newsgroups function from scikit-learn to import data.
+
+* Data Cleaning:
+    * Using the clean_data_function function to clean data by removing stopwords, lemmatizing words, and eliminating punctuation.
+
+* Text Vectorization and TF-IDF Transformation:
+    * Using CountVectorizer for text vectorization.
+    * Using TfidfTransformer for TF-IDF transformation.
+
+* Model Training:
+    * Using the multinomial Naive Bayes model with MultinomialNB() and training with TF-IDF-transformed training data.
+
+* Model Evaluation:
+    * Calculating accuracy, classification report, and confusion matrix to evaluate the model's performance.
+
+* Prediction on New Documents:
+    * Applying the model to new documents to predict their categories.
+
+
+## Technologies Used:
+
+Programming Language: Python
+Libraries: scikit-learn, NLTK
+Machine Learning Model: Multinomial Naive Bayes
+Text Transformation Tools: CountVectorizer, TfidfTransformer
 
 
 ## Evaluation
