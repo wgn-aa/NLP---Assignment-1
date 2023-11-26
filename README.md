@@ -62,10 +62,10 @@ We were also be permitted to implement a solution based on Logistic Regression a
 
 ## Technologies Used:
 
-* Programming Language: Python
-* Libraries: scikit-learn, NLTK
-* Machine Learning Model: Multinomial Naive Bayes
-* Text Transformation Tools: CountVectorizer, TfidfTransformer
+* Programming Language: **Python**
+* Libraries: **scikit-learn**, **NLTK**
+* Machine Learning Model: **Multinomial Naive Bayes**
+* Text Transformation Tools: **CountVectorizer**, **TfidfTransformer**
 
 
 ## Evaluation
