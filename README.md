@@ -15,7 +15,7 @@ We were also be permitted to implement a solution based on Logistic Regression a
 
 ##  Operational Structure:
 
-* Data Import:
+* Data Import (from internet):
     * Textual data is imported from the '20 newsgroups' dataset with categories such as 'rec.sport.baseball', 'soc.religion.christian', 'sci.med'etc.
     * These categories are used as labels to train and test the model.
 
@@ -62,10 +62,10 @@ We were also be permitted to implement a solution based on Logistic Regression a
 
 ## Technologies Used:
 
-Programming Language: Python
-Libraries: scikit-learn, NLTK
-Machine Learning Model: Multinomial Naive Bayes
-Text Transformation Tools: CountVectorizer, TfidfTransformer
+* Programming Language: Python
+* Libraries: scikit-learn, NLTK
+* Machine Learning Model: Multinomial Naive Bayes
+* Text Transformation Tools: CountVectorizer, TfidfTransformer
 
 
 ## Evaluation
