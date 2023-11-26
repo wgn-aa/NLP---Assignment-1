@@ -1,6 +1,6 @@
 # Project
 
-Here is the code for the first Natural Language Processing (NLP) assignment
+Here is the code with commentary for the first Natural Language Processing (NLP) assignment
 
 
 ## Subject
@@ -13,17 +13,19 @@ We were be permitted to implement solutions based on Naive Bayes methods, both o
 We were also be permitted to implement a solution based on Logistic Regression approach, again with a feature extraction based on pre-processing with a Naive classifier, or extracted directly from Wikipedia based on the annotated keywords. Also in this case, texts could be pre-processed or not.
 
 
+
 ## Method used
 
-The implementation was performed by using NLTK (Python library) and is based on the Naive Bayes method.
+The implementation was performed by using **NLTK (Python library)** and is based on the **Naive Bayes method**.
 
 Main steps in the code:
-    - import all the necessary library (sklearn, nltk...)
-    - import data from internet (thanks to fetch_20newsgroups from sklearn datasets )
-    - clean data (by removing stopwords, lemmatizing and deleting punctuation)
-    - convert text documents to a matrix of token counts (using CountVectorizer() from sklearn)
-    - inverse document frequency (downscales words that appear a lot across documents by giving a weight to a word indicating its importance for classification)
-    - do the Naive Bayes classifier (train the Multinomial Naive Bayes classifier using the TF-IDF transformed training data and the corresponding category then make predictions on the test data)
+- import all the necessary library (sklearn, nltk...)
+- import data from internet (thanks to fetch_20newsgroups from sklearn datasets )
+- clean data (by removing stopwords, lemmatizing and deleting punctuation)
+- convert text documents to a matrix of token counts (using CountVectorizer() from sklearn)
+- inverse document frequency (downscales words that appear a lot across documents by giving a weight to a word indicating its importance for classification)
+- do the Naive Bayes classifier (train the Multinomial Naive Bayes classifier using the TF-IDF transformed training data and the corresponding category then make predictions on the test data)
+
 
 
 ## Evaluation
@@ -35,7 +37,8 @@ We then display a detailed classification report which includes precision, recal
 We also display the confusion matrix which is a table showing the number of true positives, true negatives, false positives, and false negatives.
 
 
-# To test a new document
+
+## To test a new document
 
 A new document can be tested to determine whether it is a medical text or not.
 
